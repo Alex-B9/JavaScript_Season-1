@@ -4,5 +4,8 @@
 (() => {
 
     // your code here
-
+    let img = document.createElement("img");
+    img.src = "http://www.randomkittengenerator.com/cats/rotator.php";
+    let block = document.getElementById("source");
+    block.appendChild(img);
 })();

@@ -12,5 +12,14 @@
     ];
 
     // your code here
-
+    let next=1;
+    let img=document.querySelector('img');
+    document.getElementById("next").addEventListener("click",()=>{
+        let nextimg=gallery[next];
+        if(next === gallery.length){
+            return(next=0);
+        }
+        img.setAttribute("src",nextimg);
+        next++;
+    });
 })();

@@ -4,5 +4,11 @@
 (() => {
 
     // your code here
-
+    let pass = document.getElementById('pass-one');
+    let count = document.getElementById('counter');
+    let maxLength = 10;
+    pass.setAttribute('maxLength',maxLength);
+    pass.addEventListener('input',()=>{
+        count.innerText=`${pass.value.length}/${maxLength}`;
+    })
 })();
