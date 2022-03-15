@@ -3,4 +3,12 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        window.lib.getPersons().then(async (persons) => {
+                await persons.forEach(person => {
+                    console.log(person);
+                });
+            })
+            .catch(err => console.error(err));
+    });
 })();

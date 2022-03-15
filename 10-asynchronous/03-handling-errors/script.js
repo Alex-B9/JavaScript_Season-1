@@ -3,4 +3,15 @@
 
 (() => {
     // your code here
+   document.getElementById(`run`).addEventListener(`click`, () => {
+       window.lib.getPersons((error, article) => {
+           if (error != null){
+               return console.error(error);
+           }else{
+               article.forEach((e) => {
+                   console.log(e);
+               });
+           };
+       });
+   });
 })();

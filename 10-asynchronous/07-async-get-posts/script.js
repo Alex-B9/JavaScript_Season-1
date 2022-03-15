@@ -3,4 +3,15 @@
 
 (() => {
     // your code here
+    document.getElementById(`run`).addEventListener(`click`, () => {
+        async function post(){
+            await window.lib.getPosts()
+                .then(article => {
+                    article.forEach(e => {
+                        return console.log(e);
+                    });
+                });
+        }
+        post();
+    });
 })();

@@ -4,5 +4,17 @@
 (() => {
 
     // your code here
+    let counter = 0;
+    let btn = document.getElementById('increment');
+    let txt = document.getElementById('target');
+
+    txt.innerHTML = localStorage.getItem("counter");
+    // counter = localStorage.getItem("counter");
+
+    btn.addEventListener('click', () => {
+        counter++;
+        txt.innerHTML = counter.toString();
+        localStorage.setItem("counter", counter.toString());
+    });
 
 })();
